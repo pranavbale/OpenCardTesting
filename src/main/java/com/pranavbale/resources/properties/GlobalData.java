@@ -22,4 +22,8 @@ public class GlobalData  {
         return properties.getProperty(key);
     }
 
+    public static void main(String[] args) {
+        System.out.println(loadProperties("HomeURL"));
+    }
+
 }
