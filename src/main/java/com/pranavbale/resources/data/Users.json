@@ -1,0 +1,26 @@
+[
+  {
+    "firstName" : "Shiva",
+    "lastName" : "Bale",
+    "email" : "shivabale@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Shiva",
+    "subscribe" : "yes"
+  },
+  {
+    "firstName" : "Ram",
+    "lastName" : "Kumar",
+    "email" : "ramkumar@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Ram",
+    "subscribe" : "yes"
+  },
+  {
+    "firstName" : "Sattya",
+    "lastName" : "Nathe",
+    "email" : "sattyanathe@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Sattya",
+    "subscribe" : "yes"
+  }
+]
