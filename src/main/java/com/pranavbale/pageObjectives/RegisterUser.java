@@ -5,14 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import tools.jackson.databind.JsonNode;
 
 public class RegisterUser extends AbstractComponent {
 
-    WebDriver driver;
-
     public RegisterUser(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -52,13 +50,25 @@ public class RegisterUser extends AbstractComponent {
     @FindBy(xpath = "//*[@id=\"account-register\"]/div[1]")
     WebElement alert;
 
-    public void createAccount() {
+    public void createAccount(JsonNode node) {
         myAccount.click();
         register.click();
-        resisterAccount();
+        resisterAccount(node);
     }
 
-    public void resisterAccount() {
+    public void resisterAccount(JsonNode node) {
+
+        firstName.sendKeys(node.path("firstName").asString());
+        lastName.sendKeys(node.path("lastName").asString());
+        email.sendKeys(node.path("email").asString());
+        telephone.sendKeys(node.path("telephone").asString());
+        password.sendKeys(node.path("password").toString());
+        conformPassword.sendKeys(node.path("password").toString());
+        subscribeNo.click();
+        privacyPolicy.click();
+//        submit.click();
+
+
     }
 
 }
