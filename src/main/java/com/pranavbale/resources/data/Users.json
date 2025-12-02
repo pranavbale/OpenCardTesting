@@ -22,5 +22,37 @@
     "telephone" : 1234567,
     "password" : "Sattya",
     "subscribe" : "yes"
+  },
+  {
+    "firstName" : "Pranav",
+    "lastName" : "Bale",
+    "email" : "pranavbale@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Pranav",
+    "subscribe" : "yes"
+  },
+  {
+    "firstName" : "Saurabh",
+    "lastName" : "Bale",
+    "email" : "saurabhbale@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Saurabh",
+    "subscribe" : "yes"
+  },
+  {
+    "firstName" : "Radha",
+    "lastName" : "Kumar",
+    "email" : "radhakumar@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Radha",
+    "subscribe" : "yes"
+  },
+  {
+    "firstName" : "Krishna",
+    "lastName" : "Kumar",
+    "email" : "krishnakumar@gmail.com",
+    "telephone" : 1234567,
+    "password" : "Krishna",
+    "subscribe" : "yes"
   }
 ]
