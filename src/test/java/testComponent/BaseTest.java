@@ -5,7 +5,9 @@ import com.google.errorprone.annotations.ThreadSafe;
 import com.pranavbale.resources.properties.GlobalData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -26,7 +28,13 @@ public class BaseTest {
 
         // initialize browser accordingly
         if (webDriver.equals("chrome")) {
-            driver = new ChromeDriver();
+
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+
+            driver = new ChromeDriver(options);
         } else if (webDriver.equals("safari")) {
             driver = new SafariDriver();
         }
@@ -52,11 +60,11 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void closeApplication() {
-        try {
-            Thread.sleep(Duration.ofSeconds(3));
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Thread.sleep(Duration.ofSeconds(10));
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         driver.quit();
     }
 }
